@@ -24,9 +24,9 @@ class ASSecretShare:
         if isinstance(scalar, int) or isinstance(scalar, GaloisRingElement):
             return ASSecretShare(self.share * scalar)
         elif isinstance(scalar, ASSecretShare):
-            raise TypeError(""type error"")
+            raise TypeError("type error")
         else:
-            raise TypeError(f""type error": {type(scalar)}")
+            raise TypeError("type error")
 
     def __rmul__(self, scalar):
         return self.__mul__(scalar)

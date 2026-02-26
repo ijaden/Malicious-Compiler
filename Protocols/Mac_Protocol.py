@@ -259,12 +259,3 @@ def run_test(pid):
     except Exception as e:
         print(f"[{pid}] \033[91mFAILED\033[0m: Verification error - {e}")
 
-def test():
-    if len(sys.argv) < 2:
-        print("Usage: python Mac_Protocol.py <node_id>")
-        sys.exit(1)
-    node_id = int(sys.argv[1])
-    run_test(node_id)
-
-if __name__ == "__main__":
-    test()
